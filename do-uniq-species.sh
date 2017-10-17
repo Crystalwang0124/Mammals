@@ -8,4 +8,5 @@ for data_file in $@
 	do
 	echo "Unique species in $data_file" 
 	# Extract species names from data_file
-	cut -d , -f 2 $data_file 
+	cut -d , -f 2 $data_file | sort | uniq  #sort by species and find the unique one
+	done
